@@ -1,7 +1,7 @@
 <div class="container is--map">
     <div id="tooltip">
       <div class="">
-        <p class="state-name">new york</p>
+        <p class="state-name"></p>
         <span>us state name</span>
       </div>
       <table>
@@ -49,7 +49,7 @@
             <path id="Path_18" data-name="Path 18" d="M2753.717-158.218q-5.8-.593-11.608-1.181c-7.79-.791-15.643-1.344-23.4-2.385l-49.041-6.549-31.126-4.162c-4.253-.568-8.931-.665-13.086-1.8q-6.7,49.853-13.385,99.706,35.361,4.419,70.724,8.842c22.074,2.763,44.412,6.638,66.7,6.638.521,0,1.908-37.646,2.031-40.213q1.346-28.192,2.694-56.386C2754.266-156.651,2754.746-158.114,2753.717-158.218Z" transform="translate(-2612.071 174.295)"></path>
             </svg> 
         </div>
-        <div state-name="Wyonming" class="map__state wy">
+        <div state-name="Wyoming" class="map__state wy">
             <svg class="state" width="100%" height="100%" viewBox="0 0 137.089 113.337">
             <path id="Path_15" data-name="Path 15" d="M2615.558-276.109c-1.834-.213-10.093-2.479-11.694-1.367-2.051,6.193-2.214,14.42-3.232,20.925q-2.585,16.515-5.168,33.024c-2.187,13.973-4.545,27.874-7.061,41.8q64.716,8.64,129.423,17.283,2.762-35.561,5.521-71.117,1.074-13.809,2.145-27.617c.022-.269-16.13-1.965-17.077-2.073q-32.332-3.784-64.66-7.562Z" transform="translate(-2588.403 277.781)"></path>
             </svg>
@@ -703,7 +703,7 @@
     overflow: hidden;
     font-size: 14px;
     color: #1b1818;
-    opacity: 1; 
+    opacity: 0; 
     pointer-events: none; 
     white-space: nowrap;
     z-index: 9999;
@@ -718,6 +718,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
     padding: 10px 15px;
   }
 
@@ -726,6 +727,7 @@
     font-weight: 800;
     color: #1B1818;
     margin: 0;
+    line-height: 100%;
   }
 
   #tooltip span{
@@ -736,6 +738,7 @@
   }
 
   #tooltip table{
+    width: 100%;
     text-align: left;
     border-collapse: collapse;
     border-spacing: 0;
@@ -750,14 +753,18 @@
   #tooltip table tbody tr td{
     font-size: 12px;
     color: #1B1818;
-    padding: 8px 15px;
+    padding: 12px 15px;
   }
 
   #tooltip table tbody tr td:first-child{
     min-width: 150px;
   }
   #tooltip table tbody tr td:last-child{
-    font-size: 12px;
+    font-size: 13px;
+    color: #f95816;
+  }
+  #tooltip table tbody tr td:last-child span{
+    font-size: 11px;
     color: #f95816;
   }
 
