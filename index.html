@@ -1,32 +1,35 @@
 <div class="container is--map">
     <div id="tooltip">
+      <div class="">
         <p class="state-name">new york</p>
-        <table>
-            <thead>
-                <tbody>
-                    <tr>
-                        <td>Average Price</td>
-                        <td class="average-price">0</td>
-                    </tr>
-                    <tr>
-                        <td>Median Price</td>
-                        <td class="median-price">0</td>
-                    </tr>
-                    <tr>
-                        <td>Minimum Price</td>
-                        <td class="minimum-price">0</td>
-                    </tr>
-                    <tr>
-                        <td>Maximum Price</td>
-                        <td class="maximum-price">0</td>
-                    </tr>
-                    <tr>
-                        <td>Data Points</td>
-                        <td class="data-points">0</td>
-                    </tr>
-                </tbody>
-            </thead>
-        </table>
+        <span>us state name</span>
+      </div>
+      <table>
+          <thead>
+              <tbody>
+                  <tr>
+                      <td>Average Price</td>
+                      <td class="average-price">0</td>
+                  </tr>
+                  <tr>
+                      <td>Median Price</td>
+                      <td class="median-price">0</td>
+                  </tr>
+                  <tr>
+                      <td>Minimum Price</td>
+                      <td class="minimum-price">0</td>
+                  </tr>
+                  <tr>
+                      <td>Maximum Price</td>
+                      <td class="maximum-price">0</td>
+                  </tr>
+                  <tr>
+                      <td>Data Points</td>
+                      <td class="data-points">0</td>
+                  </tr>
+              </tbody>
+          </thead>
+      </table>
     </div>
     <div class="map">
         <img src="https://assets.website-files.com/60253fc8855619aa1d4fe563/6025407112456f5ca5fab97a_full-map.svg" class="map__img">
@@ -694,14 +697,13 @@
   
   #tooltip {
     position: absolute;
-    background: rgba(255, 255, 255);
-    color: white;
-    padding: 15px 0 0;
-    border: 1px solid #f9581659;
-    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: 0 4 20 rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
     font-size: 14px;
     color: #1b1818;
-    opacity: 0; 
+    opacity: 1; 
     pointer-events: none; 
     white-space: nowrap;
     z-index: 9999;
@@ -712,12 +714,25 @@
     opacity: 1;
   }
 
+  #tooltip > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
   #tooltip p{
-    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #1B1818;
+    margin: 0;
+  }
+
+  #tooltip span{
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: #f95816;
+    color: #C4C4C4;
+    font-size: 8px;
+    letter-spacing: 0.08em;
   }
 
   #tooltip table{
@@ -729,15 +744,21 @@
   }
 
   #tooltip table tbody tr:nth-child(odd){
-    background-color: rgba(249, 88, 22, .2);
+    background-color: #F9F9F9;
   }
 
   #tooltip table tbody tr td{
+    font-size: 12px;
+    color: #1B1818;
     padding: 8px 15px;
   }
 
   #tooltip table tbody tr td:first-child{
     min-width: 150px;
+  }
+  #tooltip table tbody tr td:last-child{
+    font-size: 12px;
+    color: #f95816;
   }
 
   @media(max-width: 625px){
