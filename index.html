@@ -23,10 +23,6 @@
                       <td>Maximum Price</td>
                       <td class="maximum-price">0</td>
                   </tr>
-                  <tr>
-                      <td>Data Points</td>
-                      <td class="data-points">0</td>
-                  </tr>
               </tbody>
           </thead>
       </table>
@@ -339,12 +335,29 @@
     transition-duration: 0.15s;
     transition-timing-function: ease-out;
   }
+
   .state:hover path,
   .state:hover circle {
     fill: #f95816;
   }
+
   .map__state {
     pointer-events: none;
+  }
+
+  .low-price .state path, 
+  .low-price .state circle{
+    fill: #F4B49D;
+  }
+  
+  .medium-price .state path, 
+  .medium-price .state circle{
+    fill: #f59b7b;
+  }
+
+  .high-price .state path, 
+  .high-price .state circle{
+    fill: #f4774a;
   }
 
   .state.border{
